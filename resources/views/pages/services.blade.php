@@ -1,16 +1,14 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>{{config('app.name', 'CodeMommy')}}</title>        
-        
-    </head>
-    <body>
-        <h1>Service</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vitae odio labore ipsum tempora sunt adipisci, libero beatae mollitia recusandae distinctio molestias id inventore sint hic voluptatibus, quibusdam dolore ad!</p>
-        
-    </body>
-</html>
+@section('content')
+    <h1>{{$title}}</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vitae odio labore ipsum tempora sunt adipisci, libero beatae mollitia recusandae distinctio molestias id inventore sint hic voluptatibus, quibusdam dolore ad!</p>
+    @if(count($services) > 0)
+        <ul class="list-group">
+            @foreach ($services as $service)
+                <li class="list-group-item">{{$service}} </li>
+            @endforeach
+        </ul>
+    @endif
+
+@endsection
