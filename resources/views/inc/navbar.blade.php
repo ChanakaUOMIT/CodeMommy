@@ -18,8 +18,9 @@
                   
                 </ul>
 
-
-
+                <ul class="navbar-nav  navbar-right">
+                    <li><a class="nav-link" href="/posts/create">Create Post</a></li>
+                </ul>
                
             </div>
         </div>

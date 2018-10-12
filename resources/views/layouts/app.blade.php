@@ -8,9 +8,20 @@
     <title>{{config('app.name', 'CodeMommy')}}</title>
 </head>
 <body>
-    @include('inc.navbar')
-    <div class="container">
-            @yield('content')    
+    <div id="app">
+        @include('inc.navbar')
+        <div class="container">
+                
+                @include('inc.messages')
+                @yield('content')    
+        </div>
+
+        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'article-ckeditor' );
+        </script>
     </div>
 </body>
+
+
 </html>
